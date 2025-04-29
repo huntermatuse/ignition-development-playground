@@ -18,7 +18,9 @@ logback.xml
 **/.resources
 
 # Ignore any inbuilt theming files as well
-**/modules/com.inductiveautomation.perspective/fonts
+**/modules/com.inductiveautomation.perspective/fonts/Merriweather
+**/modules/com.inductiveautomation.perspective/fonts/NotoSans
+**/modules/com.inductiveautomation.perspective/fonts/Roboto
 **/modules/com.inductiveautomation.perspective/icons/ignition.svg
 **/modules/com.inductiveautomation.perspective/icons/material.svg
 **/modules/com.inductiveautomation.perspective/icons/symbol_mimic.svg
