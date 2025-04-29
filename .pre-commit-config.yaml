@@ -1,0 +1,18 @@
+repos:
+  - repo: local
+    hooks:
+      - id: fix-json-resources
+        name: Fix JSON resource files
+        entry: bash python-scripts/run_fix_resource.sh
+        language: system
+        types: [json]
+  - repo: https://github.com/design-group/ignition-lint
+    rev: v0.1.0
+    hooks:
+      - id: ignition-lint
+        args: [
+          "--component-style", "PascalCase",
+          "--parameter-style", "camelCase",
+          "--allow-acronyms",
+        ]
+        files: view\.json$
