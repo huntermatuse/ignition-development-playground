@@ -1,0 +1,42 @@
+site_name: elev8 docs
+theme:
+  name: material
+  logo: assets/elev8.svg
+  favicon: assets/favicon.ico
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: indigos
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - palette.toggle
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.magiclink
+  - pymdownx.betterem
+  - pymdownx.tilde
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.keys
+  - pymdownx.arithmatex
+  - pymdownx.snippets
+  - pymdownx.caret
+nav:
+  - Home: index.md
+  - Quick Links: quick-links.md
+  - Internal:
+      - Getting Started: internal/getting-started.md
+      - Development Standards: internal/development-standards.md
+  - MES:
+      - OEE: mes/oee.md
