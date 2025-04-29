@@ -1,0 +1,27 @@
+@import "../custom-light/globals.css";
+@import "../custom-dark/variables.css";
+
+::selection {
+    background: #101010;
+    color: var(--label);
+}
+
+/* styling for scrollbar in dark mode*/
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+::-webkit-scrollbar-track {
+    background: #2D2D2D;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #4d4d4d;
+}
+::-webkit-scrollbar-thumb:hover{
+  	background: #414040;
+}
+::-webkit-scrollbar-thumb:active{
+  	background: #343434;
+}
+
+

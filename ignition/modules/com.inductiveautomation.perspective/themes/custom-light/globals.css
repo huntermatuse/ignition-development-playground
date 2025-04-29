@@ -1,0 +1,45 @@
+body {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--label);
+    background-color: var(--containerRoot);
+    font-size: 100%;
+}
+
+input, textarea, keygen, select, button {
+    font-family: Roboto;
+    font-weight: 600;
+}
+
+:focus {
+    outline: none;
+}
+
+::selection {
+    background: var(--callToActionHighlight);
+    color: var(--label);
+}
+/*scrollbar*/
+::-webkit-scrollbar-track {
+    background: #DDDCDB;
+}
+::-webkit-scrollbar-thumb{
+    background: #c7c7c7;
+}
+::-webkit-scrollbar-thumb:hover{
+  	background: #b8b8b8;
+}
+::-webkit-scrollbar-thumb:active{
+  	background: #c9c9c9;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 0.5em;
+}
+::-webkit-scrollbar-corner {
+    background-color: #DDDCDB;
+}
+*::-webkit-scrollbar-corner {
+    background-color: inherit;
+}
+
