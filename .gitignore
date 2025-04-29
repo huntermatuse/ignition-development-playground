@@ -46,6 +46,13 @@ logback.xml
 
 ##
 #
+#   MSSQL gitignore
+#
+##
+**/sql-backups/
+
+##
+#
 #   Python gitignore
 #
 ##
@@ -224,3 +231,20 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**/backup-testing/
