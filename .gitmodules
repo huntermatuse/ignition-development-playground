@@ -1,0 +1,4 @@
+[submodule "mssql-docker"]
+	path = mssql-docker
+	url = https://github.com/huntermatuse/mssql-docker
+	branch = master
