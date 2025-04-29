@@ -2,3 +2,7 @@
 	path = mssql-docker
 	url = https://github.com/huntermatuse/mssql-docker
 	branch = master
+[submodule "ignition-docker"]
+	path = ignition-docker
+	url = https://github.com/huntermatuse/ignition-docker
+	branch = master
