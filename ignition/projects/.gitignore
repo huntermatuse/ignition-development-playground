@@ -1,0 +1,20 @@
+##
+#
+#   Ignition gitignore
+#
+##
+.resources/
+# Ignore all files and directories in mes_ui_dev
+mes_ui_dev/
+config.idb
+# Ignore all files and directories in operator_app_dev
+operator_app_dev/
+
+# Ignore the config.idb file
+config.idb
+
+conversion-report.txt
+
+.DS_Store
+
+*.swp
