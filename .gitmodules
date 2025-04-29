@@ -1,8 +1,8 @@
-[submodule "mssql-docker"]
-	path = mssql-docker
-	url = https://github.com/huntermatuse/mssql-docker
-	branch = master
 [submodule "ignition-docker"]
 	path = ignition-docker
 	url = https://github.com/huntermatuse/ignition-docker
+	branch = master
+[submodule "mssql-docker"]
+	path = mssql-docker
+	url = https://github.com/huntermatuse/mssql-docker
 	branch = master
