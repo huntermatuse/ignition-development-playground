@@ -1,0 +1,24 @@
+services:
+  gateway:
+    image: bwdesigngroup/ignition-docker:latest
+    hostname: gateway
+    ports:
+      - 8088
+    volumes:
+      - ./ignition:/workdir
+      - ./ignition/backups/gateway.gwbk:/restore.gwbk
+    environment:
+      - SYMLINK_GITIGNORE=false
+      - SYMLINK_LOGBACK=false
+    command: >
+      -r /restore.gwbk
+  database:
+    image: bwdesigngroup/mssql-docker
+    hostname: mssql
+    ports:
+      - 1433
+    volumes:
+      - ./init-sql:/docker-entrypoint-initdb.d
+    # Uncomment the following line to enable backups
+    # Put all db backups in ./sql-backups folder
+    #  - ./sql-backups:/backups
