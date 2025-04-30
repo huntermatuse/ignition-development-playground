@@ -248,3 +248,4 @@ cython_debug/
 
 
 **/backup-testing/
+!ignition-docker/build
