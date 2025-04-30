@@ -10,7 +10,7 @@ services:
   gateway:
     <<: [ *default-logging ]
     build:
-      context: gw-build
+      context: ignition-docker/gw-build
       dockerfile: Dockerfile
       args:
         IGNITION_VERSION: ${IGNITION_VERSION:-8.1.47}
