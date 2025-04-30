@@ -26,4 +26,4 @@ services:
 
 secrets:
   gateway-admin-password:
-    file: gw-secrets/GATEWAY_ADMIN_PASSWORD
+    file: ignition-docker/gw-secrets/GATEWAY_ADMIN_PASSWORD
