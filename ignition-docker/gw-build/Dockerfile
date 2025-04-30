@@ -69,7 +69,6 @@ COPY --chmod=0755 --chown=root:root docker-entrypoint-shim.sh /usr/local/bin/
 ENV WORKING_DIRECTORY=/workdir \
     ACCEPT_IGNITION_EULA=Y \
     GATEWAY_ADMIN_USERNAME=admin \
-    GATEWAY_ADMIN_PASSWORD=password \
     IGNITION_EDITION=standard \
     GATEWAY_MODULES_ENABLED=alarm-notification,allen-bradley-drivers,bacnet-driver,opc-ua,perspective,reporting,tag-historian,web-developer \
     IGNITION_UID=1000 \

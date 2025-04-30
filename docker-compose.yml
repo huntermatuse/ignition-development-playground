@@ -14,16 +14,11 @@ services:
       dockerfile: Dockerfile
       args:
         IGNITION_VERSION: ${IGNITION_VERSION:-8.1.47}
-      secrets:
-        - gateway-admin-password
     image: huntermatuse-ignition:dev-${IGNITION_VERSION:-8.1.47}
     ports:
       - 8088:8088
     environment:
       TZ: America/NewYork
+      GATEWAY_ADMIN_PASSWORD: ${GATEWAY_PASSWORD:-password}
     volumes:
       - ./ignition:/workdir
-
-secrets:
-  gateway-admin-password:
-    file: ignition-docker/gw-secrets/GATEWAY_ADMIN_PASSWORD
