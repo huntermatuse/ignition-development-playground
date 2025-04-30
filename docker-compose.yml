@@ -1,24 +1,29 @@
+---
+x-default-logging: &default-logging
+  logging:
+    options:
+      max-size: '100m'
+      max-file: '5'
+    driver: json-file
+
 services:
   gateway:
-    image: bwdesigngroup/ignition-docker:latest
-    hostname: gateway
+    <<: [ *default-logging ]
+    build:
+      context: gw-build
+      dockerfile: Dockerfile
+      args:
+        IGNITION_VERSION: ${IGNITION_VERSION:-8.1.47}
+      secrets:
+        - gateway-admin-password
+    image: huntermatuse-ignition:dev-${IGNITION_VERSION:-8.1.47}
     ports:
-      - 8088
+      - 8088:8088
+    environment:
+      TZ: America/NewYork
     volumes:
       - ./ignition:/workdir
-      - ./ignition/backups/gateway.gwbk:/restore.gwbk
-    environment:
-      - SYMLINK_GITIGNORE=false
-      - SYMLINK_LOGBACK=false
-    command: >
-      -r /restore.gwbk
-  database:
-    image: bwdesigngroup/mssql-docker
-    hostname: mssql
-    ports:
-      - 1433
-    volumes:
-      - ./init-sql:/docker-entrypoint-initdb.d
-    # Uncomment the following line to enable backups
-    # Put all db backups in ./sql-backups folder
-    #  - ./sql-backups:/backups
+
+secrets:
+  gateway-admin-password:
+    file: gw-secrets/GATEWAY_ADMIN_PASSWORD
