@@ -14,19 +14,12 @@ services:
       dockerfile: Dockerfile
       args:
         IGNITION_VERSION: ${IGNITION_VERSION:-8.1.47}
-        # GATEWAY_ADMIN_USERNAME: superadmin
       secrets:
         - gateway-admin-password
     image: huntermatuse-ignition:dev-${IGNITION_VERSION:-8.1.47}
     ports:
       - 8088:8088
-    # volumes:  # this volumes section is commented out for easier testing
-    #   - gateway-data:/usr/local/bin/ignition/data
     environment:
-      # Defining these below will perform a password reset, see the build above for 
-      # updating/preloading the admin username/password in the `default` user source.
-      # GATEWAY_ADMIN_USERNAME: admin
-      # GATEWAY_ADMIN_PASSWORD_FILE: /run/secrets/gateway-admin-password
       TZ: America/NewYork
 
 secrets:
